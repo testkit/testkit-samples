@@ -1,0 +1,6 @@
+<widget xmlns="http://www.w3.org/ns/widgets">
+  <feature name = "http://tizen.org/api/tizen" required="true"/>
+  <feature name = "http://tizen.org/api/contact.read" required="true"/>
+  <feature name = "http://tizen.org/api/contact.write" required="true"/>
+  <feature name = "http://tizen.org/api/contact" required="true"/>
+</widget>

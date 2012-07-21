@@ -1,0 +1,10 @@
+<widget id='template' xmlns='http://www.w3.org/ns/widgets' xmlns:tizen='http://tizen.org/ns/widgets'> 
+  <name>template</name>
+  <access origin="*"/>
+  <feature name = "http://tizen.org/api/tizen" required="true"/>
+  <feature name = "http://tizen.org/api/contact.read" required="true"/>
+  <feature name = "http://tizen.org/api/contact.write" required="true"/>
+  <feature name = "http://tizen.org/api/contact" required="true"/>
+  <icon src="custom.png" height="123" width="123"/>
+</widget>
+
