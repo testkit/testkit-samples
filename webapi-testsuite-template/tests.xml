@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"  href="./testcase.xsl"?>
+<test_definition>
 <suite name="System">
   <set name="template">
     <testcase purpose="template" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test1">
@@ -73,4 +75,4 @@
     </testcase>
   </set>
 </suite>
-
+</test_definition>

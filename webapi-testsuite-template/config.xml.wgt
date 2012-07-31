@@ -6,5 +6,6 @@
   <feature name = "http://tizen.org/api/contact.write" required="true"/>
   <feature name = "http://tizen.org/api/contact" required="true"/>
   <icon src="custom.png" height="123" width="123"/>
+  <tizen:setting rotation-lock="landscape" />
 </widget>
 
