@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="example">
+  <set name="set1">
+    <testcase purpose="example" type="functional" status="ready" requirement_ref="example" component="example" execution_type="auto" priority="P1" id="example">
+      <description>
+        <pre_condition />
+        <post_condition />
+        <steps>
+          <step order="1">
+            <step_desc>Execute /opt/core-testsuite-example/core-testsuite-example</step_desc>
+            <expected>0</expected>
+          </step>
+        </steps>
+        <test_script_entry test_script_expected_result="0">/opt/core-testsuite-example/core-testsuite-example</test_script_entry>
+      </description>
+      <categories>
+        <category>platform1</category>
+        <category>platform2</category>
+      </categories>
+    </testcase>
+    <testcase purpose="example_manual" type="functiona2" status="ready" requirement_ref="example" component="example" execution_type="manual" priority="P1" id="example_manual">
+      <description>
+        <pre_condition />
+        <post_condition />
+        <steps>
+          <step order="1">
+            <step_desc>Execute /opt/core-testsuite-example/core-testsuite-example</step_desc>
+            <expected>0</expected>
+          </step>
+        </steps>
+        <test_script_entry test_script_expected_result="0">/opt/core-testsuite-example/core-testsuite-example</test_script_entry>
+      </description>
+      <categories>
+        <category>platform1</category>
+        <category>platform2</category>
+      </categories>
+    </testcase>
+  </set>
+</suite>
