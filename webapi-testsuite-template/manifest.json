@@ -1,8 +1,8 @@
 {
     "version": "0.0.1",
-    "name": "template",
+    "name": "webapi-testsuite-template",
     "permissions": ["tabs", "unlimited_storage", "notifications", "http://*/*", "https://*/*"],
-    "description": "template",
+    "description": "webapi test suite template",
     "webapimanager": true,
     "file_name": "manifest.json",
     "app": {

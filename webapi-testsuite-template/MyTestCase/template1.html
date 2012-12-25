@@ -1,4 +1,4 @@
-
+<!doctype html>
 <!--
 Copyright (c) 2012 Intel Corporation.
 
@@ -28,53 +28,21 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Authors:
 	Huajun Li <huajun.li@intel.com>
 
-Revision history:
-
 -->
 
-<!doctype html>
 <html lang="en">
-
-<head>
-<title>Tizen module tests</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css"/>
-<script src="support/template.js"></script>
-</head>
-
-<body>
-<embed id="web-api-manager" type="application/x-webapi-manager" width="0" height="0"/>
-<div id=log></div>
-<script>
-	function tizen_bluetooth_getDefaultAdapter()
-	{
-		//The api is in blacklist(not supported list)
-		if (! is_platform_supported("BluetoothManager.getDefaultAdapter")) {
-			try {
-				var adapter = tizen.bluetooth.getDefaultAdapter();
-			} catch (err) {
-				if (err.name == "NOT_SUPPORTED_ERROR")
-					assert_true(true, "Mark the case as \"PASS\" because the platform actually doesn't support the method");
-				else
-					assert_true(false, "Exception while get default adapter" + err.name + err.message);
-			}
-
-			return;
-		}
-
-		//The API is not in blacklist, then do normal tests
-		try {
-			var adapter = tizen.bluetooth.getDefaultAdapter();
-		} catch (err) {
-			assert_true(false, "Exception while get default adapter" + err.name + err.message);
-		}
-
-
-	}
-
-	test(tizen_bluetooth_getDefaultAdapter, "Test Description: Test method -- BluetoothManager getDefaultAdapter.");
-
-</script>
-</div>
-</body>
+  <head>
+    <title>Template</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="support/template.js"></script>
+  </head>
+  <body>
+    <embed id="web-api-manager" type="application/x-webapi-manager" width="0" height="0"/>
+    <div id=log></div>
+    <script>
+        test(false, "Test Description: Tizen module integration test.", "test2");
+    </script>
+    </div>
+  </body>
 </html>

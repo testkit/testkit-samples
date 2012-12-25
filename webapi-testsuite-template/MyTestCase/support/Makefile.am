@@ -1,3 +1,3 @@
 support_SCRIPTS = *
-supportdir = /opt/$(PACKAGE)/MyTestCase/support
+supportdir = /opt/webapi-testsuite-template/MyTestCase/support
 EXTRA_DIST = $(support_SCRIPTS)

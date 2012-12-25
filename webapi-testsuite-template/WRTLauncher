@@ -61,7 +61,9 @@ def on_signal(signum, stackframe):
 def get_launcher():
     launcher = ""
     for i in range(len(launcher_list)):
-        ret = commands.getstatusoutput("which %s > /dev/null 2>&1" % launcher_list[i])
+        #on some image, there lacks of 'which' command
+        #ret = commands.getstatusoutput("which %s > /dev/null 2>&1" % launcher_list[i])
+        ret = commands.getstatusoutput("%s > /dev/null 2>&1" % launcher_list[i])
         if ret[0] == 0:
             launcher = launcher_list[i]
             break
@@ -95,17 +97,21 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, on_signal)
 
     if launcher == wgt_launcher:
-        cmd = "%s -l | grep %s | tail -n 1 | awk '{ print $2 }'" % ("wrt-launcher", testsuite)
+        #cmd = "%s -l | grep %s | tail -n 1 | awk '{ print $2 }'" % ("wrt-launcher", testsuite)
+        #cmd = "%s -l 2> /dev/null | grep %s | tail -n 1 | awk '{ print $NF }' | awk -F'.' '{ print $3 }'" % ("wrt-launcher", testsuite)
+        cmd = "%s -l 2> /dev/null | grep %s | tail -n 1 | awk '{ print $NF }'" % ("wrt-launcher", testsuite)
         pkg_id = commands.getoutput(cmd)
         if pkg_id:
-            ret = commands.getstatusoutput("which %s > /dev/null 2>&1" % aul_launcher)
+            #on some image, there lacks of 'which' command
+            #ret = commands.getstatusoutput("which %s > /dev/null 2>&1" % aul_launcher)
+            ret = commands.getstatusoutput("%s > /dev/null 2>&1" % aul_launcher)
             if ret[0] == 0:
-                cmd = "%s launch org.tizen.%s | awk -F'ret = ' '{print $2}'" % (aul_launcher, pkg_id)
+                cmd = "%s launch %s 2> /dev/null | awk -F'ret = ' '{print $2}'" % (aul_launcher, pkg_id)
                 pid = commands.getoutput(cmd)
                 pid = pid.replace("\n", "")
-                cmd = "ps -ef | grep %s | grep 'org.tizen.%s' | wc -l" % (pid, pkg_id)
+                cmd = "ps -ef | grep %s | grep %s | wc -l" % (pid, pkg_id)
                 if pid:
-                    print "Launch test by cmd: \"%s launch org.tizen.%s\"" % (aul_launcher, pkg_id)
+                    print "Launch test by cmd: \"%s launch %s\"" % (aul_launcher, pkg_id)
                     while True:
                         ret = commands.getoutput(cmd)
                         if ret == '1':  #the test widget exits
@@ -114,6 +120,8 @@ if __name__ == "__main__":
                 else:
                     print "Fail to launch test \"%s\" by %s launch" % (testsuite, aul_launcher)
             else: #Launch the test by wrt-client
+                cmd = "%s -l 2> /dev/null | grep %s | tail -n 1 | awk '{ print $2 }'" % ("wrt-launcher", testsuite)
+                pkg_id = commands.getoutput(cmd)
                 cmd = "%s -l %s" % (launcher, pkg_id)
                 os.system(cmd)
         else:
