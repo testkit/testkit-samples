@@ -1,48 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl"  href="./testcase.xsl"?>
 <test_definition>
-<suite name="System" launcher="WRTLauncher">
-  <set name="template">
-    <testcase purpose="template1" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test1">
-      <description>
-        <pre_condition />
-        <post_condition />
-        <steps>
-          <step order="1">
-            <step_desc>check</step_desc>
-            <expected>pass</expected>
-          </step>
-        </steps>
-        <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/MyTestCase/template1.html?total_num=1&amp;locator_key=id&amp;value=1</test_script_entry>
-      </description>
-      <specs>
-        <spec>
-          <spec_assertion element_type="" element_name="" interface="" specification="" section="" category="" />
-          <spec_url></spec_url>
-          <spec_statement />
-        </spec>
-      </specs>
-    </testcase>
-    <testcase purpose="template2" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test2">
-      <description>
-        <pre_condition />
-        <post_condition />
-        <steps>
-          <step order="1">
-            <step_desc>check</step_desc>
-            <expected>pass</expected>
-          </step>
-        </steps>
-        <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/MyTestCase/template2.html?total_num=1&amp;locator_key=id&amp;value=1</test_script_entry>
-      </description>
-      <specs>
-        <spec>
-          <spec_assertion element_type="" element_name="" interface="" specification="" section="" category="" />
-          <spec_url></spec_url>
-          <spec_statement />
-        </spec>
-      </specs>
-    </testcase>
-  </set>
-</suite>
+  <suite name="System">
+    <set name="template">
+      <testcase purpose="template1" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test1">
+        <description>
+          <pre_condition/>
+          <post_condition/>
+          <steps>
+            <step order="1">
+              <step_desc>check</step_desc>
+              <expected>pass</expected>
+            </step>
+          </steps>
+          <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/mytest/template.html?total_num=5&amp;locator_key=id&amp;value=1</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion element_type="" element_name="" interface="" specification="" section="" category=""/>
+            <spec_url/>
+            <spec_statement/>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="template2" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test2">
+        <description>
+          <pre_condition/>
+          <post_condition/>
+          <steps>
+            <step order="1">
+              <step_desc>check</step_desc>
+              <expected>pass</expected>
+            </step>
+          </steps>
+          <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/mytest/template.html?total_num=5&amp;locator_key=id&amp;value=2</test_script_entry>
+        </description>
+        <spec/>
+      </testcase>
+      <testcase purpose="template3" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test3">
+        <description>
+          <pre_condition/>
+          <post_condition/>
+          <steps>
+            <step order="1">
+              <step_desc>check</step_desc>
+              <expected>pass</expected>
+            </step>
+          </steps>
+          <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/mytest/template.html?total_num=5&amp;locator_key=id&amp;value=3</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion element_type="" element_name="" interface="" specification="" section="" category=""/>
+            <spec_url/>
+            <spec_statement/>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="template4" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test4">
+        <description>
+          <pre_condition/>
+          <post_condition/>
+          <steps>
+            <step order="1">
+              <step_desc>check</step_desc>
+              <expected>pass</expected>
+            </step>
+          </steps>
+          <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/mytest/template.html?total_num=5&amp;locator_key=id&amp;value=4</test_script_entry>
+        </description>
+        <spec/>
+      </testcase>
+      <testcase purpose="template5" type="compliance" status="approved" component="WebAPI/System/Tizen" execution_type="auto" priority="P1" id="test5">
+        <description>
+          <pre_condition/>
+          <post_condition/>
+          <steps>
+            <step order="1">
+              <step_desc>check</step_desc>
+              <expected>pass</expected>
+            </step>
+          </steps>
+          <test_script_entry test_script_expected_result="0">/opt/webapi-testsuite-template/mytest/template.html?total_num=5&amp;locator_key=id&amp;value=5</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion element_type="" element_name="" interface="" specification="" section="" category=""/>
+            <spec_url/>
+            <spec_statement/>
+          </spec>
+        </specs>
+      </testcase>
+    </set>
+  </suite>
 </test_definition>

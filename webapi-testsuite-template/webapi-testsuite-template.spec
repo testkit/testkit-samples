@@ -99,9 +99,9 @@ cd $pre_dir
 rm -rf $RPM_BUILD_DIR/%name
 
 #copy web runtime launcher wraper
-mkdir -p $RPM_BUILD_ROOT/usr/bin
-chmod 755 WRTLauncher
-cp -a WRTLauncher $RPM_BUILD_ROOT/usr/bin
+#mkdir -p $RPM_BUILD_ROOT/usr/bin
+#chmod 755 WRTLauncher
+#cp -a WRTLauncher $RPM_BUILD_ROOT/usr/bin
 mkdir -p $RPM_BUILD_ROOT/opt/unpacked_crx/%name
 ########################## end ##############################
 
@@ -112,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 /opt/%name
 /usr/share/%name
-/usr/bin/WRTLauncher
+#/usr/bin/WRTLauncher
 /opt/unpacked_crx/%name
 
 %changelog

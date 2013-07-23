@@ -38,6 +38,6 @@
   <feature name = "http://tizen.org/api/time.read" required="true"/>
   <feature name = "http://tizen.org/api/time.write" required="true"/>
   <icon src="custom.png" height="123" width="123"/>
-  <tizen:application id="WebTemplate" required_version="1.0"/>
+  <tizen:application id="webapitemp.WebAPITestsuiteTemplate" package="webapitemp" required_version="2.1"/>
 </widget>
 
