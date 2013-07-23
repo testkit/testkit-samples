@@ -1,4 +1,6 @@
-All test cases under this folder come from http://w3c-test.org/resources/ without any modification besides the necessary adjustment on reference path to test harness
+All test files under this folder except blacklist*, COPYING, Makefile.am come from
+https://github.com/w3c/testharness.js (commit 91cef790676780e63ec72e79ff9406aeba11991d)
+without any modification besides the necessary adjustment on reference path to test harness
 
 These tests are copyright by W3C and/or the author listed in the test
 file. The tests are dual-licensed under the W3C Test Suite License:
