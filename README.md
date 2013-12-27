@@ -16,9 +16,9 @@
 
        $ ./pack.sh
 
-   Unzip the package on the test machine by running the following command:
+   Unzip the package on the test machine, use TIZEN Target for instance:
 
-       $ unzip -o webapi-testsuite-template-<version>.zip -d /opt/usr/media/tct
+       $ sdb shell "unzip -o webapi-testsuite-template-<version>.zip -d /opt/usr/media/tct"
 
    Install the package on the test machine, use TIZEN Target for instance:
 
