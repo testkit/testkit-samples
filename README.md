@@ -6,6 +6,8 @@
 
 # Build and Run
 
+- Web Test Suite:
+
    Prepare for building by running the following command:
        $ cd webapi-testsuite-template
 
@@ -20,3 +22,7 @@
 
    Run test cases by running the following command on host:
        $ testkit-lite -f device:/opt/usr/media/tct/opt/webapi-testsuite-template/tests.xml -e "WRTLauncher" -o webapi-testsuite-template.results.xml
+
+- Core Test Suite:
+
+  TBD
